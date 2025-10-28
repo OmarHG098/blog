@@ -1,0 +1,152 @@
+---
+description: Naming conventions for blog articles ensuring consistent file naming across all markdown files in the blog directory.
+globs: 
+  - "blog/**/*.md"
+alwaysApply: true
+---
+
+# Blog File Naming Standard
+
+**Scope:** `blog/**/*.md`  
+**Purpose:** Ensure consistent, SEO-friendly, and platform-compatible file naming for all blog articles.
+
+---
+
+## Core Naming Rules
+
+### 1. Character Restrictions
+- **NO special characters:** Avoid commas (`,`), question marks (`?`), exclamation marks (`!`), parentheses (`()`, `[]`), quotes (`"`, `'`), ampersands (`&`), or any other special characters
+- **NO uppercase letters:** Use only lowercase letters
+- **NO spaces:** Replace all spaces with hyphens (`-`)
+- **NO underscores:** Use hyphens (`-`) instead of underscores (`_`)
+
+### 2. Word Separation
+- **Use hyphens (`-`)** to separate words
+- **Be descriptive but concise:** Aim for 3-7 words in the filename
+- **Remove articles:** Avoid "a", "an", "the" unless essential for meaning
+
+### 3. Language Suffixes
+- **English articles:** `.us.md` or `.md` (default)
+- **Spanish articles:** `.es.md`
+- **Base name must be identical** for translation pairs
+
+---
+
+## Naming Pattern
+
+```
+[descriptive-slug].[language].md
+```
+
+**Examples:**
+- `full-stack-developer.md` (English, default)
+- `full-stack-developer.us.md` (English, explicit)
+- `full-stack-developer.es.md` (Spanish translation)
+
+---
+
+## Transformation Rules
+
+### From Title to Filename
+
+| Title | ❌ Bad Filename | ✅ Good Filename |
+|-------|----------------|------------------|
+| "What Is A Full Stack Developer?" | `What-Is-A-Full-Stack-Developer.md` | `what-is-full-stack-developer.md` |
+| "How Much Does a Coding Bootcamp Cost?" | `how-much-does-a-coding-bootcamp-cost?.md` | `how-much-coding-bootcamp-cost.md` |
+| "Python vs JavaScript: Which to Learn?" | `Python_vs_JavaScript-Which_to_Learn.md` | `python-vs-javascript-which-to-learn.md` |
+| "The $600,000 Job Crisis" | `the-$600,000-job-crisis.md` | `the-600000-job-crisis.md` |
+| "AI & Machine Learning Trends" | `AI-&-Machine-Learning-Trends.md` | `ai-machine-learning-trends.md` |
+
+### Special Character Handling
+
+| Character | Action | Example |
+|-----------|--------|---------|
+| `$` | Remove or spell out | `$600k` → `600k` or `600-thousand` |
+| `%` | Remove or spell out | `100%` → `100-percent` |
+| `&` | Replace with "and" | `AI & ML` → `ai-and-ml` |
+| `+` | Replace with "plus" or remove | `C++` → `c-plus-plus` |
+| `#` | Remove or spell out | `C#` → `c-sharp` |
+| `@` | Remove or spell out | `@mentions` → `mentions` |
+| Numbers | Keep as digits | `2024 trends` → `2024-trends` |
+
+---
+
+## File Structure Examples
+
+### ✅ Correct Examples
+
+**Single Language Articles:**
+```
+blog/
+├── python-bootcamp-guide.md
+├── machine-learning-career.md
+├── cybersecurity-tips.us.md
+└── guia-supervivencia-2025.es.md
+```
+
+**Translation Pairs:**
+```
+blog/
+├── full-stack-developer.md
+├── full-stack-developer.es.md
+├── coding-bootcamp-cost.us.md
+├── coding-bootcamp-cost.es.md
+├── software-engineer-salary.md
+└── software-engineer-salary.es.md
+```
+
+### ❌ Incorrect Examples
+
+```
+blog/
+├── What-Is-A-Full-Stack-Developer?.md          # Uppercase, special chars
+├── python_vs_javascript.md                     # Underscores
+├── How Much Does a Coding Bootcamp Cost.md     # Spaces, no extension
+├── AI&ML-trends.md                             # Special characters
+├── the-$600,000-job-crisis.md                  # Special characters
+└── curso de programación.es.md                 # Spaces, accents
+```
+
+---
+
+## Validation Checklist
+
+Before creating or renaming blog files, ensure:
+
+- [ ] **Lowercase only:** No uppercase letters anywhere
+- [ ] **Hyphen separation:** Words separated by hyphens (`-`)
+- [ ] **No special characters:** Only letters, numbers, hyphens, and dots
+- [ ] **Proper extension:** `.md`, `.us.md`, or `.es.md`
+- [ ] **Descriptive slug:** Clearly indicates article content
+- [ ] **Translation consistency:** Paired files have identical base names
+- [ ] **Length appropriate:** Not too long (under 60 characters total)
+
+---
+
+## Common Transformations
+
+### Question-Based Titles
+- "How to become a developer?" → `how-to-become-developer.md`
+- "What is machine learning?" → `what-is-machine-learning.md`
+- "Why choose Python?" → `why-choose-python.md`
+
+### Comparison Articles
+- "Python vs JavaScript" → `python-vs-javascript.md`
+- "Bootcamp vs University" → `bootcamp-vs-university.md`
+- "Frontend vs Backend" → `frontend-vs-backend.md`
+
+### Guide/Tutorial Articles
+- "Complete Python Guide" → `complete-python-guide.md`
+- "Beginner's JavaScript Tutorial" → `beginner-javascript-tutorial.md`
+- "Step-by-step React Setup" → `step-by-step-react-setup.md`
+
+### Career/Salary Articles
+- "Software Engineer Salary 2024" → `software-engineer-salary-2024.md`
+- "Full Stack Developer Jobs" → `full-stack-developer-jobs.md`
+- "Tech Career Path Guide" → `tech-career-path-guide.md`
+
+---
+
+**Version:** v1.0  
+**Last Updated:** 2025-10-28  
+**Scope:** All markdown files in `blog/` directory

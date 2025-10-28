@@ -11,16 +11,18 @@ Description: Translation guidelines for blog articles in markdown format, ensuri
 **Purpose:**
 This rule ensures consistency in multilingual blog content while maintaining a youthful tone and preserving technical accuracy. Unlike the main website repo, translations are optional and managed through an external content platform.
 
+**Note:** File naming conventions are defined in `naming-standard.mdc` and must be followed for all blog articles.
+
 ---
 
 ## 1. File Structure
 
 ### Naming Convention
+**File naming follows the Blog File Naming Standard** (see `naming-standard.mdc`):
 - **English Articles:** `[article-name].us.md` or `[article-name].md`
 - **Spanish Articles:** `[article-name].es.md`
 - **Translation Pairs:** Use identical base name with different language suffixes
-  - ✅ `full-stack-developer.md` + `full-stack-developer.es.md`
-  - ✅ `coding-bootcamp.us.md` + `coding-bootcamp.es.md`
+- **No special characters:** Use hyphens, lowercase only, no spaces or special chars
 
 ### File Location
 - **All blog articles:** `/blog/` directory
@@ -139,8 +141,9 @@ cover: "https://api.example.com/images/cover.jpg"  # Optional: Image URL from AP
 - [ ] Tone matches target audience (informal, "tú" form for ES)
 
 **Translation Pairs (when creating pairs):**
-- [ ] Base filename identical except language suffix
+- [ ] Base filename identical except language suffix (follows naming-standard.mdc)
 - [ ] Both files in `/blog/` directory
+- [ ] Filename follows naming conventions (lowercase, hyphens, no special chars)
 - [ ] Content semantically equivalent
 - [ ] Language-specific clusters and tags used
 
