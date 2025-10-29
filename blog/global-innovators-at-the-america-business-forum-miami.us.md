@@ -1,4 +1,3 @@
-
 ---
 author: "4Geeks Academy"
 cluster: "trends-and-tech"
